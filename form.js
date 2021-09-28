@@ -5,12 +5,13 @@ function checkNumDocumento(valor, tipo){
 }
 
 
-function checkContraseña(valor){
-  return false
+function checkContrasena(valor) {
+  const regexPassword = /^(?=.*?[a-z])(?=.*?\d)(?=.*?[A-Z]).{8,}$/;
+  return regexPassword.test(valor);
 }
 
 function checkCorreo(valor){
   return false
 }
 
-module.exports = {checkContraseña, checkCorreo, checkNumDocumento}
+module.exports = {checkContrasena, checkCorreo, checkNumDocumento}
